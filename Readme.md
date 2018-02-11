@@ -1,5 +1,15 @@
 Dots-And-Boxes is a two-player (typically the players are denoted as A and B) strategy game with simple rules which can be played with just paper and pencil. The game starts with an empty grid of points. Both players in turn connect two adjacent points either by vertical or horizontal lines. It is not allowed to fill in a line more than once. If a player manages to complete the fourth line of a box she takes the ownership of this box and must perform an additional move, hence, draw another line. A player may but is not forced to capture a box if other moves are still available. The game ends after all lines on the grid are drawn. The player who owns the most boxes in the end wins the game. If both players captured the same amount of boxes, the match is considered as a tie. A tie is only possible for those boards which consist of an even number of boxes. An example for a typical Dots-And-Boxes position on a 5 x 5 grid is given in the following figure:
+
+
 ![](dab.png)
+Left: Example position on a 5 x 5 grid for Dots-and-Boxes, taken from Berlekamp's Dots-and-
+Boxes book (problem 12.15), with player A to move. There is only one optimal move that allows A to
+win, indicated here by the dashed line. All other moves lead to a win for player B.
+Right: One possible outcome for the given position on the left, assuming perfect play of both opponents.
+Player A wins by a narrow margin of one box. The solution to this problem was found with the help of
+[Wilson's solver](http://wilson.engr.wisc.edu/boxes/).
+
+
 One important characteristic of this game is the possibility to vary the size of the grid as desired. Theoretically, Dots-And-Boxes can be played on all grids with M x N boxes (with M,N > 0), which corresponds to a grid with (M+1) x (N+1) points. M and N may be varied in order to steer the complexity of the game, although not all combinations of M and N may be reasonable, since many are trivially solvable or induce an overly complex problem. Since the state-space complexity and the game tree size rapidly grow with increasing grid size, the largest board to be solved until today has the size of 4 x 5 boxes, which took about one month on a 3.33GHz Xeon machine. In order to solve the 4 x 5 board, Barker & Korf performed a classical alpha-beta search with several game-specific enhancements for pruning the search-tree. Additionally, the search was supported by a 24GB transposition table.
 In general, the complexity for different board sizes can be estimated as follows: for a M x N board, there are 
 
