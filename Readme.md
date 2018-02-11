@@ -1,3 +1,12 @@
+# Dots-And-Boxes Reinforcement Learning Framework with N-Tuple Systems
+Although only a simple console-based environment can be provided for Dots-and-Boxes at
+this stage, the software already contains several powerful tools, that are especially useful
+for designing and executing experiments: The user simply definesnes the general setup of
+the experiments (e.g., a grid-search based on n parameters) and the software then creates
+all necessary parameter files (XML-based), executes the experiments (in parallel, using
+multithreading, if desired) and writes the results into CSV-files.
+
+## Dots-And-Boxes
 Dots-And-Boxes is a two-player (typically the players are denoted as A and B) strategy game with simple rules which can be played with just paper and pencil. The game starts with an empty grid of points. Both players in turn connect two adjacent points either by vertical or horizontal lines. It is not allowed to fill in a line more than once. If a player manages to complete the fourth line of a box she takes the ownership of this box and must perform an additional move, hence, draw another line. A player may but is not forced to capture a box if other moves are still available. The game ends after all lines on the grid are drawn. The player who owns the most boxes in the end wins the game. If both players captured the same amount of boxes, the match is considered as a tie. A tie is only possible for those boards which consist of an even number of boxes. An example for a typical Dots-And-Boxes position on a 5 x 5 grid is given in the following figure:
 
 
